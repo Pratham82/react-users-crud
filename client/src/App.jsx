@@ -7,11 +7,6 @@ import AddUsers from '../src/pages/AddUsers'
 import NavBar from './layouts/Navbar'
 
 export default function App() {
-  // return (
-  //   <Container>
-  //     <ListUsers />
-  //   </Container>
-  // )
   return (
     <BrowserRouter>
       <Router>
@@ -30,4 +25,4 @@ export default function App() {
     </BrowserRouter>
   )
 }
-//
+
