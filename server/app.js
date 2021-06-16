@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const connectToDB = require('./utils/db-connection')
 var cors = require('cors')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3005
 
 // Connecting to database
 connectToDB()

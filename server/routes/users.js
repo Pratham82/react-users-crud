@@ -17,6 +17,22 @@ router.get('/', async (_, res) => {
   }
 })
 
+router.get('/:id', async (req, res) => {
+  try {
+    let user = await User.findById(req.params.id)
+
+    if (!user) return res.status(404).json({ msg: 'Contact not found' })
+
+    await User.findById(req.params.id)
+
+    res.json({ data: user })
+  } catch (e) {
+    /* handle error */
+    console.error(e.message)
+    res.status(500).send('Server Error')
+  }
+})
+
 router.post(
   '/',
   // [
