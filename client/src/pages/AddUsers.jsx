@@ -29,53 +29,12 @@ export default function ContactForm() {
 
   // Making  a universal onchange function so it will change with respect to the element with that name and the changed values
   const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value })
-  //   const onChange = (e) => {
-  //     const { name, value } = e.target
-
-  //     setUser({
-  //       ...user,
-  //       [name]: value,
-  //     })
-  //   }
-
-  //   const { addContact, current, clearCurrent, updateContact } = contactContext
-
-  //   const clearAll = () => {
-  //     clearCurrent()
-  //   }
-
-  //   useEffect(() => {
-  //     if (current !== null) {
-  //       setContact(current)
-  //     } else {
-  //       setContact({
-  //         name: '',
-  //         email: '',
-  //         phone: '',
-  //         type: 'personal',
-  //       })
-  //     }
-  //   }, [contactContext, current])
-
-  //   const onSubmit = (e) => {
-  //     e.preventDefault()
-  //     if (current === null) {
-  //       addContact(contact)
-  //     } else {
-  //       updateContact(contact)
-  //     }
-
-  //     //Passing the current state to the addContact method from contact
-  //     clearAll()
-  //   }
   const [validated, setValidated] = useState(false)
 
   const isCurrentUserEmpty = () =>
     Object.entries(user)
       .map((val) => val[1])
       .some((val) => val == '')
-
-  console.log(isCurrentUserEmpty())
 
   function addUser(e) {
     e.preventDefault()
