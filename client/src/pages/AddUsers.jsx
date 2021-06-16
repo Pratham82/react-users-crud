@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { Form, Col, InputGroup, Button, Alert } from 'react-bootstrap'
-import { useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Form, Col, InputGroup, Button } from 'react-bootstrap'
 import axios from 'axios'
-// import {
-//   Form as ValidatedForm,
-//   ValidatedInput,
-// } from 'react-bootstrap-validation'
 const { REACT_APP_API_URL } = process.env
-// import ContactContext from '../../contexts/contact/contactContext'
 
 export default function ContactForm() {
-  //   const contactContext = useContext(ContactContext)
-
-  //Setting initial state
   const initialUser = {
     name: '',
     email: '',
@@ -34,7 +25,7 @@ export default function ContactForm() {
   const isCurrentUserEmpty = () =>
     Object.entries(user)
       .map((val) => val[1])
-      .some((val) => val == '')
+      .some((val) => val === '')
 
   function addUser(e) {
     e.preventDefault()
@@ -97,17 +88,6 @@ export default function ContactForm() {
               </Form.Control.Feedback>
             </InputGroup>
           </Form.Group>
-          {/* <ValidatedInput
-            type="password"
-            name="password"
-            label="Password"
-            // You can pass params to validation rules
-            validate="required,isLength:6:60"
-            errorHelp={{
-              required: 'Please specify a password',
-              isLength: 'Password must be at least 6 characters',
-            }}
-          /> */}
           <Form.Group as={Col} md="4" controlId="validationCustomUsername">
             <Form.Label>Phone</Form.Label>
             <InputGroup hasValidation>
