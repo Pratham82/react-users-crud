@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Container, Card, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 const { REACT_APP_API_URL } = process.env
 
@@ -58,7 +59,9 @@ export default function ListUsers() {
                 >
                   Delete
                 </Button>{' '}
-                <Button variant="secondary">Edit</Button>{' '}
+                <Link to={{ pathname: '/editUsers', state: user._id }}>
+                  <Button variant="secondary">Edit</Button>{' '}
+                </Link>
               </Card.Body>
             </Card>
           ))}
