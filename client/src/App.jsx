@@ -4,6 +4,7 @@ import { Switch } from 'react-router-dom'
 import NotFound from './pages/NotFound'
 import ListUsers from '../src/pages/ListUsers'
 import AddUsers from '../src/pages/AddUsers'
+import EditUsers from '../src/pages/EditUsers'
 import NavBar from './layouts/Navbar'
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
             <Switch>
               <Route path="/" component={ListUsers} exact={true} />
               <Route path="/addUsers" component={AddUsers} />
-              <Route path="/editUsers" component={ListUsers} />
+              <Route path="/editUsers" component={EditUsers} />
               <Route path="*" component={NotFound} />
             </Switch>
           </Container>
@@ -25,4 +26,3 @@ export default function App() {
     </BrowserRouter>
   )
 }
-
