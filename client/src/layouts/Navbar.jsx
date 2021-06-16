@@ -1,14 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 
 export default function Header() {
   return (
@@ -19,7 +10,6 @@ export default function Header() {
         <Nav className="mr-auto">
           <Nav.Link href="/">List Users</Nav.Link>
           <Nav.Link href="/addUsers">Add Users</Nav.Link>
-          <Nav.Link href="/editUsers">Edit Users</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
